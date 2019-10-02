@@ -1,0 +1,28 @@
+include modules/head/head
+include modules/header/header
+include modules/sidebar/sidebar
+include modules/footer/footer
+include modules/foot/foot
+
+doctype html
+html.no-js(lang='ja')
+  head
+    +head()
+  body
+    +header()
+    section.Container.clearfix
+      +sidebar()
+      section.Container-wrap
+        .clearfix.wid50.Floatleft.pr10
+          // ===== ImageThumb ======
+          .ImageThumb
+            .ImageThumb__one
+              .ThumbInfo
+                .ThumbInfo__img
+                  img(src='http://via.placeholder.com/350x270', alt='')
+                .ThumbInfo__info
+                  p
+                    | 記事タイトルが入ります。ああああああああああああああああああ ああああああああああああああああああああああああああああああ
+    
+    +footer()
+    +foot()
